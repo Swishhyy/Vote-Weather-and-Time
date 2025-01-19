@@ -1,0 +1,4 @@
+name: VWT
+version: '0.0.1'
+main: me.swishhyy.VWT
+api-version: '1.20'
