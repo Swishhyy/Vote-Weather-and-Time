@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class VotingManager {
 
-    private final VWT plugin;             // Reference to your main plugin
+    private final VW plugin;             // Reference to your main plugin
     private boolean voteActive = false;
     private String voteType;              // "weather" or "time"
     private String proposedOption;        // e.g., "sunny", "stormy", "day", "noon", etc.
@@ -26,7 +26,7 @@ public class VotingManager {
     // Example cooldown of 60 seconds
     private static final long COOLDOWN_MS = 60_000L;
 
-    public VotingManager(VWT plugin) {
+    public VotingManager(VW plugin) {
         this.plugin = plugin;
     }
 
@@ -38,7 +38,7 @@ public class VotingManager {
 
     public boolean canStartVote(Player player) {
         // Admins bypass cooldown
-        if (player.hasPermission("vwt.admin")) {
+        if (player.hasPermission("vw.admin")) {
             return true;
         }
         // Check if the player has started a vote recently

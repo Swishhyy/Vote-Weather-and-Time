@@ -1,6 +1,6 @@
 package me.swishhyy.Commands;
 
-import me.swishhyy.VWT;
+import me.swishhyy.VW;
 import me.swishhyy.VotingManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,10 +16,10 @@ import java.util.List;
 
 public class StartVoteCommand implements CommandExecutor, TabCompleter {
 
-    private final VWT plugin;
+    private final VW plugin;
     private final VotingManager votingManager;
 
-    public StartVoteCommand(VWT plugin, VotingManager votingManager) {
+    public StartVoteCommand(VW plugin, VotingManager votingManager) {
         this.plugin = plugin;
         this.votingManager = votingManager;
     }
@@ -38,7 +38,7 @@ public class StartVoteCommand implements CommandExecutor, TabCompleter {
         }
 
         // Permission check
-        if (!player.hasPermission("vwt.startvote")) {
+        if (!player.hasPermission("vw.startvote")) {
             plugin.sendWeatherVoterMessage(player, "You don't have permission to start votes!");
             return true;
         }

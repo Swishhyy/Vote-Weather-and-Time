@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public class VWT extends JavaPlugin {
+public class VW extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -27,7 +27,7 @@ public class VWT extends JavaPlugin {
             Objects.requireNonNull(getCommand("vote")).setTabCompleter(voteCmd);
         }
 
-        getLogger().info("VWT plugin enabled! /startvote and /vote are registered.");
+        getLogger().info("VW plugin enabled! /startvote and /vote are registered.");
     }
 
     public void sendWeatherVoterMessage(CommandSender recipient, String text) {
@@ -40,7 +40,7 @@ public class VWT extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("VWT plugin disabled!");
+        getLogger().info("VW plugin disabled!");
     }
 
 }
