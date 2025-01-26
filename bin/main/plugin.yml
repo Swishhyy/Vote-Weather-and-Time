@@ -1,0 +1,13 @@
+name: WeatherVoter
+version: '0.0.1'
+main: me.swishhyy.VW
+api-version: '1.20'
+commands:
+  startvote:
+    description: Starts a vote for weather or time change.
+    usage: /startvote <weatherchange|timechange> <option>
+    permission: vw.startvote
+  vote:
+    description: Votes yes or no on an active vote.
+    usage: /vote <yes|no>
+    permission: vw.vote
